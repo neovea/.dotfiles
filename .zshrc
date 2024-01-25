@@ -99,6 +99,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export DOTFILES_DIR="$HOME/.dotfiles"
+
+function source_if_exists() { [ -f "$1" ] && source "$1" }
+
+source_if_exists "$DOTFILES_DIR/zsh/options.zsh"
+source_if_exists "$DOTFILES_DIR/zsh/git.zsh"
+source_if_exists "$DOTFILES_DIR/zsh/aliases.zsh"
+
 alias pdc="docker compose -f docker-compose.local.yml"
 alias cl=clear
 alias vim=nvim
