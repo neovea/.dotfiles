@@ -2,6 +2,7 @@ local overrides = require("custom.configs.overrides")
 
 ---@type NvPluginSpec[]
 local plugins = {
+  { 'wakatime/vim-wakatime', lazy = false },
 
   -- Override plugin definition options
 
@@ -72,7 +73,7 @@ local plugins = {
   {
     "zbirenbaum/copilot.lua",
     lazy = false,
-    opts = function ()
+    opts = function()
       return require "custom.configs.copilot"
     end,
     config = function(_, opts)
