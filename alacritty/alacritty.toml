@@ -1,4 +1,4 @@
-import = ["/home/franck/.config/alacritty/catppuccin-mocha.toml"]
+import = ["/home/franck/.config/alacritty/rosepine.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -26,4 +26,4 @@ style = "Regular"
 history = 50000
 
 [window]
-opacity = 1.0
+opacity = 1

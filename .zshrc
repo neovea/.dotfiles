@@ -8,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="alanpeabody"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export DOTFILES_DIR="$HOME/.dotfiles"
+export PATH="${PATH}:${HOME}/.local/bin/"
 
 function source_if_exists() { [ -f "$1" ] && source "$1" }
 
@@ -109,7 +111,10 @@ source_if_exists "$DOTFILES_DIR/zsh/aliases.zsh"
 
 alias pdc="docker compose -f docker-compose.local.yml"
 alias cl=clear
+alias top=btop
+alias htop=btop
 alias vim=nvim
+alias nv=lvim
 alias dswp='find . -type f -name "*.sw[klmnop]" -delete'
 alias gpm="git-prune-merged"
 alias grm='gpm; git-rebase-all'
@@ -117,3 +122,4 @@ alias grm='gpm; git-rebase-all'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

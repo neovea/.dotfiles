@@ -1,11 +1,7 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
-  { 'wakatime/vim-wakatime', lazy = false },
-
-  -- Override plugin definition options
-
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -26,7 +22,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -78,7 +74,7 @@ local plugins = {
     end,
     config = function(_, opts)
       require("copilot").setup(opts)
-    end
+    end,
   },
 }
 

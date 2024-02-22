@@ -7,3 +7,8 @@
 -- })
 vim.opt.rnu = true
 vim.opt.swapfile = false
+vim.opt.background = "dark"
+vim.opt.termguicolors = true
+vim.opt.guifont = "FiraCode Nerd Font:h12"
+vim.g.transparency = true
+
