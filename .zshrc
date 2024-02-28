@@ -102,6 +102,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export DOTFILES_DIR="$HOME/.dotfiles"
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="${PATH}:${HOME}/.config/bin/"
+
+# Personal paths
+export PATH="${PATH}:$DOTFILES_DIR/.config/bin"
 
 function source_if_exists() { [ -f "$1" ] && source "$1" }
 
