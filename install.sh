@@ -1,5 +1,7 @@
 !#/bin/bash
 
+sudo pacman -Syu -y
+
 printf "Installing stow\n"
 sudo pacman -S stow -y
 stow .
@@ -9,10 +11,10 @@ curl -L https://data.services.jetbrains.com/products/download?platform=linux&cod
 chmod +x ~/Downloads/jetbrains-toolbox-1.20.8804/jetbrains-toolbox
 
 printf "Installing packages\n"
-sudo pacman -S git zsh neovim tmux alacritty docker docker-compose make ripgrep -y
+sudo pacman -S git zsh neovim tmux alacritty make ripgrep -y
 
 printf "Installing oh-my-zsh\n"
-curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 printf "Installing tmux tmp\n"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -45,3 +47,9 @@ flatpak install flathub com.visualstudio.code
 
 printf "Installing yay packages\n"
 yay -S ttf-jetbrains-mono-nerd -y
+yay -S enpass-bin -y
+
+printf "Installing docker desktop\n"
+sudo usermod -aG docker $USER
+sudo systemctl enable docker
+sudo systemctl start docker
