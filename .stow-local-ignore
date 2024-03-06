@@ -34,3 +34,6 @@ _darcs
 .config/nvim/LICENSE
 .config/nvim/lua/core
 .config/nvim/lua/plugins
+
+install.sh
+install-fedora.sh
