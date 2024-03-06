@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="alanpeabody"
+ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,6 +118,7 @@ alias cl=clear
 alias top=btop
 alias htop=btop
 alias vim=nvim
+alias v=nvim
 alias nv=lvim
 alias dswp='find . -type f -name "*.sw[klmnop]" -delete'
 alias gpm="git-prune-merged"
